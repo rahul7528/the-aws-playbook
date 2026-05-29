@@ -17,7 +17,6 @@ A simple space where **each AWS service gets its own folder** with:
 
 No jargon walls. No assumptions. Just "what is this thing, why does it matter, and how do I try it safely?"
 
-Inspired by the [linux-command-fieldbook](https://github.com/rahul7528/linux-command-fieldbook), but for cloud.
 
 ---
 
