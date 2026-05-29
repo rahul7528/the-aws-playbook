@@ -167,40 +167,40 @@ aws iam attach-role-policy --role-name EC2-S3-Reader   --policy-arn arn:aws:iam:
 
 ## Interview Questions (with one-line answers)
 
-1. **Difference between IAM User and Role?**
-   User = long-term for person/app. Role = temporary credentials assumed by trusted entity.
+1. **Difference between IAM User and Role?**<br/>
+   User = long-term for person/app. <br/>Role = temporary credentials assumed by trusted entity.
 
-2. **Why not use Root?**
+2. **Why not use Root?**<br/>
    Root can't be restricted, no MFA enforcement, full billing access, no CloudTrail user attribution.
 
-3. **Policy evaluation logic?**
+3. **Policy evaluation logic?**<br/>
    Explicit Deny > Explicit Allow > Implicit Deny.
 
-4. **What is least privilege?**
+4. **What is least privilege?**<br/>
    Give only permissions needed for the job — chai-maker can't open safe.
 
-5. **Managed vs Inline policy?**
-   Managed = reusable, versioned. Inline = embedded, hard to audit.
+5. **Managed vs Inline policy?**<br/>
+   Managed = reusable, versioned. <br/>Inline = embedded, hard to audit.
 
-6. **How does IAM Role work for EC2?**
+6. **How does IAM Role work for EC2?**<br/>
    Instance profile provides temporary credentials via metadata service.
 
-7. **What is STS?**
+7. **What is STS?**<br/>
    Security Token Service — issues temporary credentials for AssumeRole.
 
-8. **How to give cross-account access?**
+8. **How to give cross-account access?**<br/>
    Create Role in Account B with trust policy for Account A, then assume it.
 
-9. **What is IAM Identity Center (SSO)?**
+9. **What is IAM Identity Center (SSO)?**<br/>
    Central place to manage human access across multiple AWS accounts with MFA.
 
-10. **Difference between SCP and IAM policy?**
-    SCP = guardrail at Org level (max permissions). IAM = actual permissions inside account.
+10. **Difference between SCP and IAM policy?**<br/>
+    SCP = guardrail at Org level (max permissions). <br/>IAM = actual permissions inside account.
 
-11. **How to rotate access keys safely?**
+11. **How to rotate access keys safely?**<br/>
     Create new key → update app → test → deactivate old → delete after 7 days.
 
-12. **What is permission boundary?**
+12. **What is permission boundary?** <br/>
     Maximum permissions a user/role can ever have, even if admin policy attached.
 
 ---
@@ -213,6 +213,3 @@ aws iam delete-login-profile --user-name dev-priya
 aws iam remove-user-from-group --user-name dev-priya --group-name Developers
 aws iam delete-user --user-name dev-priya
 ```
-
-## Next
-→ `03-VPC/` — now that you have keys, let's build the private neighborhood for your chai shop.
