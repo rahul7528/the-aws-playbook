@@ -103,7 +103,7 @@ Everything else builds on these.
 
 ## Prerequisites checklist (do this today)
 
-1. **Create AWS account** → use personal email, add debit card (₹2 verification)
+1. **Create AWS account** → use personal email, add debit card (₹2 verification) https://signin.aws.amazon.com/signup?request_type=register
 2. **Enable MFA on Root** → IAM → Security credentials → MFA
 3. **Create admin IAM user** → never use Root again (see 01-IAM)
 4. **Set $5 budget alarm** → Billing → Budgets → Create budget
